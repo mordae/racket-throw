@@ -11,7 +11,7 @@ so here is my take on that:
                 "milk" "spilled")
 
 ;; With a custom exception that takes more arguments:
-(define-struct exn:fail:custom (number))
+(define-struct (exn:fail:custom exn:fail) (number))
 (throw (exn:fail:custom 42)
        'things "broken for no obvious reason"
        "tea" "cold")
